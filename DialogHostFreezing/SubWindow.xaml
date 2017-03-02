@@ -1,0 +1,29 @@
+﻿<Window x:Class="DialogHostFreezing.SubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DialogHostFreezing"
+        xmlns:MaterializeDesing="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        Title="SubWindow" Height="300" Width="300">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Button Width="75" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Open DH" Click="Button_Click"/>
+            </Grid>
+
+            <Grid Grid.Column="1" Background="Black">
+                <MaterializeDesing:DialogHost Name="dialogHost" Identifier="PART_TranslationsDetailsPopup">
+                </MaterializeDesing:DialogHost>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>
